@@ -19,13 +19,20 @@ public class Main extends JPanel {
     private JLabel text;
     private ESushi randomised;
 
+
     public Main() {
 
         try {
+
             this.ingridientsList = new ArrayList<EIngridients>();
             setBackground(Color.white);
             setLayout(null);
+
+//            CreateKeysPanel createKeysPanel = new CreateKeysPanel();
+//            createKeysPanel.createKeysPanel(ingridientsList);
+//
             createKeysPanel();
+
             createTextPanel();
             createChechKey();
             createXKey();
@@ -157,13 +164,12 @@ public class Main extends JPanel {
     }
 
     public static void main(String[] args) {
+
         JFrame window = new JFrame("Kreator Sushi");
+
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setVisible(true);
-
         window.add(new Main());
-
         window.pack();
-
     }
 }
